@@ -48,13 +48,13 @@
     button:active { background: #0050cc; }
 
     #status {
-      font-size: 12px;
+      font-size: 13px;
       margin-top: 8px;
       text-align: center;
     }
-    .inside { color: #27ae60; font-weight: 700; }
+    .inside  { color: #27ae60; font-weight: 700; }
     .outside { color: #c0392b; font-weight: 700; }
-    .land { color: #8e44ad; font-weight: 700; }
+    .land    { color: #8e44ad; font-weight: 700; }
 
     #map { height: 100vh; width: 100vw; }
   </style>
@@ -64,8 +64,13 @@
     <h1>Paddle Limit Map</h1>
 
     <div class="row">
-      <label for="country">Island</label>
+      <label for="country">Country</label>
       <select id="country"></select>
+    </div>
+
+    <div class="row">
+      <label for="island">Island</label>
+      <select id="island"></select>
     </div>
 
     <div class="row">
