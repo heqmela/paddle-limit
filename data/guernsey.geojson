@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "guernsey",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -2.6000031, 49.4329338 ], [ -2.6002469, 49.4327784 ], [ -2.5999869, 49.4327909 ], [ -2.6000031, 49.4329338 ] ] ] } }
+]
+}
