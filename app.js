@@ -63,7 +63,7 @@ sel.onchange = function (e) { loadCountry(e.target.value); };
 dist.oninput = function (e) {
   distVal.textContent = e.target.value;
   drawLimit();
-  checkInside();
+  checkZone();
 };
 
 // Live GPS + inside/outside check
@@ -88,7 +88,7 @@ document.getElementById('locBtn').onclick = function () {
         meMarker.setLatLng(ll);
       }
       map.setView(ll);
-      checkInside();
+      checkZone();
     },
     function (err) { alert('Location error: ' + err.message); },
     { enableHighAccuracy: true }
