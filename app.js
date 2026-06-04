@@ -9,25 +9,55 @@ let bufferedData = null;
 let limitLayer = null;
 let landLayer = null;
 let meMarker = null;
+let catalog = [];
 
-const sel = document.getElementById('country');
+const countrySel = document.getElementById('country');
+const islandSel = document.getElementById('island');
 const dist = document.getElementById('dist');
 const distVal = document.getElementById('distVal');
 const statusEl = document.getElementById('status');
 
-// Load island list into the dropdown
+// Load catalog, build the Country dropdown
 fetch('countries.json')
   .then(function (r) { return r.json(); })
   .then(function (list) {
+    catalog = list;
+
+    // unique list of countries
+    const countries = [];
     list.forEach(function (c) {
+      if (countries.indexOf(c.country) === -1) { countries.push(c.country); }
+    });
+    countries.sort();
+
+    countries.forEach(function (name) {
+      const o = document.createElement('option');
+      o.value = name;
+      o.textContent = name;
+      countrySel.appendChild(o);
+    });
+
+    populateIslands(countries[0]);   // fill islands for first country
+  });
+
+// Fill the Island dropdown for a given country, then load the first island
+function populateIslands(country) {
+  islandSel.innerHTML = '';
+  catalog
+    .filter(function (c) { return c.country === country; })
+    .forEach(function (c) {
       const o = document.createElement('option');
       o.value = c.id;
       o.textContent = c.name;
-      sel.appendChild(o);
+      islandSel.appendChild(o);
     });
-    if (list.length) { loadCountry(list[0].id); }
-  });
+  if (islandSel.value) { loadCountry(islandSel.value); }
+}
 
+countrySel.onchange = function (e) { populateIslands(e.target.value); };
+islandSel.onchange  = function (e) { loadCountry(e.target.value); };
+
+// Load an island's geojson and draw it
 function loadCountry(id) {
   fetch('data/' + id + '.geojson')
     .then(function (r) { return r.json(); })
@@ -45,6 +75,7 @@ function loadCountry(id) {
     });
 }
 
+// Buffer the land outward and draw the red limit line
 function drawLimit() {
   if (!landData) { return; }
   const km = (Number(dist.value)) / 1000;
@@ -58,15 +89,13 @@ function drawLimit() {
   }).addTo(map);
 }
 
-sel.onchange = function (e) { loadCountry(e.target.value); };
-
 dist.oninput = function (e) {
   distVal.textContent = e.target.value;
   drawLimit();
   checkZone();
 };
 
-// Live GPS + inside/outside check
+// Live GPS tracking
 document.getElementById('locBtn').onclick = function () {
   if (!navigator.geolocation) {
     alert('Geolocation not supported on this device.');
@@ -95,14 +124,13 @@ document.getElementById('locBtn').onclick = function () {
   );
 };
 
-// Determine which zone the GPS point is in: land / within limit / outside
+// Decide which zone the GPS point is in: land / within limit / outside
 function checkZone() {
   if (!meMarker || !bufferedData || !landData) { return; }
 
   const ll = meMarker.getLatLng();
   const pt = turf.point([ll.lng, ll.lat]);
 
-  // helper: is the point inside a GeoJSON polygon/multipolygon?
   function isInside(geo) {
     const feat = geo.features ? geo.features[0] : geo;
     return turf.booleanPointInPolygon(pt, feat);
