@@ -1,27 +1,12 @@
 [
   {
-    "id": "alderney",
-    "name": "Alderney",
-    "country": "Channel Islands"
-  },
-  {
     "id": "guernsey",
     "name": "Guernsey",
     "country": "Channel Islands"
   },
   {
-    "id": "herm",
-    "name": "Herm",
-    "country": "Channel Islands"
-  },
-  {
     "id": "jersey",
     "name": "Jersey",
-    "country": "Channel Islands"
-  },
-  {
-    "id": "sark",
-    "name": "Sark",
     "country": "Channel Islands"
   },
   {
