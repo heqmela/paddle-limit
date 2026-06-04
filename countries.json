@@ -1,194 +1,242 @@
 [
   {
-    "id": "aland",
-    "name": "Aland (main)"
-  },
-  {
     "id": "alderney",
-    "name": "Alderney"
-  },
-  {
-    "id": "anglesey",
-    "name": "Anglesey"
-  },
-  {
-    "id": "bornholm",
-    "name": "Bornholm"
-  },
-  {
-    "id": "capri",
-    "name": "Capri"
-  },
-  {
-    "id": "comino",
-    "name": "Comino"
-  },
-  {
-    "id": "corfu",
-    "name": "Corfu"
-  },
-  {
-    "id": "corsica",
-    "name": "Corsica"
-  },
-  {
-    "id": "crete",
-    "name": "Crete"
-  },
-  {
-    "id": "cyprus",
-    "name": "Cyprus"
-  },
-  {
-    "id": "elba",
-    "name": "Elba"
-  },
-  {
-    "id": "formentera",
-    "name": "Formentera"
-  },
-  {
-    "id": "fuerteventura",
-    "name": "Fuerteventura"
-  },
-  {
-    "id": "gotland",
-    "name": "Gotland"
-  },
-  {
-    "id": "gozo",
-    "name": "Gozo"
-  },
-  {
-    "id": "gran_canaria",
-    "name": "Gran Canaria"
-  },
-  {
-    "id": "great_britain",
-    "name": "Great Britain"
+    "name": "Alderney",
+    "country": "Channel Islands"
   },
   {
     "id": "guernsey",
-    "name": "Guernsey"
+    "name": "Guernsey",
+    "country": "Channel Islands"
   },
   {
     "id": "herm",
-    "name": "Herm"
-  },
-  {
-    "id": "ibiza",
-    "name": "Ibiza"
-  },
-  {
-    "id": "ireland",
-    "name": "Ireland"
-  },
-  {
-    "id": "ischia",
-    "name": "Ischia"
-  },
-  {
-    "id": "isle_of_man",
-    "name": "Isle of Man"
-  },
-  {
-    "id": "skye",
-    "name": "Isle of Skye"
-  },
-  {
-    "id": "isle_of_wight",
-    "name": "Isle of Wight"
+    "name": "Herm",
+    "country": "Channel Islands"
   },
   {
     "id": "jersey",
-    "name": "Jersey"
-  },
-  {
-    "id": "kos",
-    "name": "Kos"
-  },
-  {
-    "id": "lanzarote",
-    "name": "Lanzarote"
-  },
-  {
-    "id": "lewis_harris",
-    "name": "Lewis & Harris"
-  },
-  {
-    "id": "madeira",
-    "name": "Madeira"
-  },
-  {
-    "id": "mallorca",
-    "name": "Mallorca"
-  },
-  {
-    "id": "malta",
-    "name": "Malta"
-  },
-  {
-    "id": "menorca",
-    "name": "Menorca"
-  },
-  {
-    "id": "mykonos",
-    "name": "Mykonos"
-  },
-  {
-    "id": "naxos",
-    "name": "Naxos"
-  },
-  {
-    "id": "oland",
-    "name": "Oland"
-  },
-  {
-    "id": "orkney",
-    "name": "Orkney Mainland"
-  },
-  {
-    "id": "rhodes",
-    "name": "Rhodes"
-  },
-  {
-    "id": "rugen",
-    "name": "Rugen"
-  },
-  {
-    "id": "santorini",
-    "name": "Santorini"
-  },
-  {
-    "id": "sao_miguel",
-    "name": "Sao Miguel (Azores)"
-  },
-  {
-    "id": "sardinia",
-    "name": "Sardinia"
+    "name": "Jersey",
+    "country": "Channel Islands"
   },
   {
     "id": "sark",
-    "name": "Sark"
+    "name": "Sark",
+    "country": "Channel Islands"
   },
   {
-    "id": "shetland",
-    "name": "Shetland Mainland"
+    "id": "cyprus",
+    "name": "Cyprus",
+    "country": "Cyprus"
   },
   {
-    "id": "sicily",
-    "name": "Sicily"
+    "id": "bornholm",
+    "name": "Bornholm",
+    "country": "Denmark"
   },
   {
-    "id": "tenerife",
-    "name": "Tenerife"
+    "id": "aland",
+    "name": "Aland (main)",
+    "country": "Finland"
   },
   {
-    "id": "texel",
-    "name": "Texel"
+    "id": "corsica",
+    "name": "Corsica",
+    "country": "France"
+  },
+  {
+    "id": "rugen",
+    "name": "Rugen",
+    "country": "Germany"
+  },
+  {
+    "id": "corfu",
+    "name": "Corfu",
+    "country": "Greece"
+  },
+  {
+    "id": "crete",
+    "name": "Crete",
+    "country": "Greece"
+  },
+  {
+    "id": "kos",
+    "name": "Kos",
+    "country": "Greece"
+  },
+  {
+    "id": "mykonos",
+    "name": "Mykonos",
+    "country": "Greece"
+  },
+  {
+    "id": "naxos",
+    "name": "Naxos",
+    "country": "Greece"
+  },
+  {
+    "id": "rhodes",
+    "name": "Rhodes",
+    "country": "Greece"
+  },
+  {
+    "id": "santorini",
+    "name": "Santorini",
+    "country": "Greece"
   },
   {
     "id": "zakynthos",
-    "name": "Zakynthos"
+    "name": "Zakynthos",
+    "country": "Greece"
+  },
+  {
+    "id": "ireland",
+    "name": "Ireland",
+    "country": "Ireland"
+  },
+  {
+    "id": "capri",
+    "name": "Capri",
+    "country": "Italy"
+  },
+  {
+    "id": "elba",
+    "name": "Elba",
+    "country": "Italy"
+  },
+  {
+    "id": "ischia",
+    "name": "Ischia",
+    "country": "Italy"
+  },
+  {
+    "id": "sardinia",
+    "name": "Sardinia",
+    "country": "Italy"
+  },
+  {
+    "id": "sicily",
+    "name": "Sicily",
+    "country": "Italy"
+  },
+  {
+    "id": "comino",
+    "name": "Comino",
+    "country": "Malta"
+  },
+  {
+    "id": "gozo",
+    "name": "Gozo",
+    "country": "Malta"
+  },
+  {
+    "id": "malta",
+    "name": "Malta",
+    "country": "Malta"
+  },
+  {
+    "id": "texel",
+    "name": "Texel",
+    "country": "Netherlands"
+  },
+  {
+    "id": "madeira",
+    "name": "Madeira",
+    "country": "Portugal"
+  },
+  {
+    "id": "sao_miguel",
+    "name": "Sao Miguel (Azores)",
+    "country": "Portugal"
+  },
+  {
+    "id": "formentera",
+    "name": "Formentera",
+    "country": "Spain"
+  },
+  {
+    "id": "fuerteventura",
+    "name": "Fuerteventura",
+    "country": "Spain"
+  },
+  {
+    "id": "gran_canaria",
+    "name": "Gran Canaria",
+    "country": "Spain"
+  },
+  {
+    "id": "ibiza",
+    "name": "Ibiza",
+    "country": "Spain"
+  },
+  {
+    "id": "lanzarote",
+    "name": "Lanzarote",
+    "country": "Spain"
+  },
+  {
+    "id": "mallorca",
+    "name": "Mallorca",
+    "country": "Spain"
+  },
+  {
+    "id": "menorca",
+    "name": "Menorca",
+    "country": "Spain"
+  },
+  {
+    "id": "tenerife",
+    "name": "Tenerife",
+    "country": "Spain"
+  },
+  {
+    "id": "gotland",
+    "name": "Gotland",
+    "country": "Sweden"
+  },
+  {
+    "id": "oland",
+    "name": "Oland",
+    "country": "Sweden"
+  },
+  {
+    "id": "anglesey",
+    "name": "Anglesey",
+    "country": "United Kingdom"
+  },
+  {
+    "id": "great_britain",
+    "name": "Great Britain",
+    "country": "United Kingdom"
+  },
+  {
+    "id": "isle_of_man",
+    "name": "Isle of Man",
+    "country": "United Kingdom"
+  },
+  {
+    "id": "skye",
+    "name": "Isle of Skye",
+    "country": "United Kingdom"
+  },
+  {
+    "id": "isle_of_wight",
+    "name": "Isle of Wight",
+    "country": "United Kingdom"
+  },
+  {
+    "id": "lewis_harris",
+    "name": "Lewis & Harris",
+    "country": "United Kingdom"
+  },
+  {
+    "id": "orkney",
+    "name": "Orkney Mainland",
+    "country": "United Kingdom"
+  },
+  {
+    "id": "shetland",
+    "name": "Shetland Mainland",
+    "country": "United Kingdom"
   }
 ]
