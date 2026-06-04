@@ -95,18 +95,27 @@ document.getElementById('locBtn').onclick = function () {
   );
 };
 
-// Tells you if you are inside the limit line
-function checkInside() {
-  if (!meMarker || !bufferedData) { return; }
+// Determine which zone the GPS point is in: land / within limit / outside
+function checkZone() {
+  if (!meMarker || !bufferedData || !landData) { return; }
+
   const ll = meMarker.getLatLng();
   const pt = turf.point([ll.lng, ll.lat]);
-  const poly = bufferedData.features ? bufferedData.features[0] : bufferedData;
-  const inside = turf.booleanPointInPolygon(pt, poly);
-  if (inside) {
-    statusEl.textContent = 'INSIDE the limit';
+
+  // helper: is the point inside a GeoJSON polygon/multipolygon?
+  function isInside(geo) {
+    const feat = geo.features ? geo.features[0] : geo;
+    return turf.booleanPointInPolygon(pt, feat);
+  }
+
+  if (isInside(landData)) {
+    statusEl.textContent = 'On land';
+    statusEl.className = 'land';
+  } else if (isInside(bufferedData)) {
+    statusEl.textContent = 'Within limit';
     statusEl.className = 'inside';
   } else {
-    statusEl.textContent = 'OUTSIDE the limit';
+    statusEl.textContent = 'OUTSIDE limit';
     statusEl.className = 'outside';
   }
 }
